@@ -46,6 +46,15 @@ Start the server
 
 Create a database named `userdb` and create a table inside it named `usertable`
 
+The MySQL user should have the following privileges:
+
+- DELETE
+- EXECUTE
+- INSERT
+- SELECT
+- SHOW VIEW
+- UPDATE
+
 ## Table schema
 
 ![App Screenshot](schema.png)
