@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Besume</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="sidebar-top">
+        <span class="shrink-btn">
+          <i class="bx bx-chevron-left"></i>
+        </span>
+        <img src="./images/logo.png" class="logo" alt="" />
+        <h3 class="hide">Besume</h3>
+      </div>
+
+      <div style="display: none" class="search">
+        <i class="bx bx-search"></i>
+        <input type="text" class="hide" placeholder="Quick Search ..." />
+      </div>
+
+      <div class="sidebar-links">
+        <ul>
+          <div class="active-tab"></div>
+          <li class="tooltip-element" id="portfolio" data-tooltip="0">
+            <a href="#main" class="active" data-active="0">
+              <div class="icon">
+                <i class="bx bx-file-blank"></i>
+                <i class="bx bxs-file-blank"></i>
+              </div>
+              <span class="link hide">Portfolio</span>
+            </a>
+          </li>
+          <li class="tooltip-element" id="edit" data-tooltip="1">
+            <a href="#edit" data-active="1">
+              <div class="icon">
+                <i class="bx bx-edit-alt"></i>
+                <i class="bx bxs-edit-alt"></i>
+              </div>
+              <span class="link hide">Edit</span>
+            </a>
+          </li>
+          <li class="tooltip-element" id="edit" data-tooltip="2">
+            <a data-active="2" onclick="window.print();" id="print">
+              <div class="icon">
+                <i class="bx bx-printer"></i>
+                <i class="bx bxs-printer"></i>
+              </div>
+              <span class="link hide">Print</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="account tooltip-element" data-tooltip="0">
+          <i class="bx bx-user"></i>
+        </a>
+        <div class="admin-user tooltip-element" data-tooltip="1">
+          <div class="admin-profile hide">
+            <img src="./images/pic.jpg" alt="" />
+            <div class="admin-info">
+              <h3 id="user-name"></h3>
+            </div>
+          </div>
+          <a class="log-out">
+            <i class="bx bx-log-out"></i>
+          </a>
+        </div>
+        <div class="tooltip">
+          <span class="show"></span>
+          <span>Logout</span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div id="main" class="content">
+        <h3>Your Portfolio</h3>
+        <hr />
+        <div id="display-data" class="container">
+          <h2 id="d-name"></h2>
+          <h4>Highest Qualification : &nbsp;&nbsp;<span id="d-qual"></span></h4>
+          <h4>Current Status : &nbsp;&nbsp;<span id="d-status"></span></h4>
+          <h4>Email : &nbsp;&nbsp;<span id="d-email"></span></h4>
+          <hr />
+          <h5>About</h5>
+          <div class="container" id="d-about">
+            <p id="d-about-text" class="text"></p>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-6">
+              <h5>Skills</h5>
+              <div id="d-skills"></div>
+            </div>
+            <div class="col-6">
+              <h5>Achievements</h5>
+              <div id="d-achievements"></div>
+            </div>
+          </div>
+          <hr />
+          <h5>Projects</h5>
+          <div id="d-projects"></div>
+        </div>
+      </div>
+      <div class="hidden content" id="edit-page">
+        <h1>Edit</h1>
+        <div class="container">
+          <form method="post" id="editForm">
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="form6Example1"
+                    name="name"
+                    class="form-control"
+                    required
+                  />
+                  <label class="form-label" for="form6Example1"
+                    >Full name</label
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="form6Example2"
+                    name="githubProfile"
+                    class="form-control"
+                    required
+                  />
+                  <label class="form-label" for="form6Example2"
+                    >Github Profile Link</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="form6Example6"
+                    name="qualification"
+                    class="form-control"
+                    required
+                  />
+                  <label class="form-label" for="form6Example1"
+                    >Highest Qualification</label
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="form6Example8"
+                    name="status"
+                    class="form-control"
+                    required
+                  />
+                  <label class="form-label" for="form6Example2"
+                    >Working professional or student</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form6Example3"
+                name="skills"
+                class="form-control"
+                required
+              />
+              <label class="form-label" for="form6Example3"
+                >Skills (Comma seperated)</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form6Example4"
+                name="projects"
+                class="form-control"
+                required
+              />
+              <label class="form-label" for="form6Example4"
+                >Project Links (Comma seperated)</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form6Example5"
+                name="achievements"
+                class="form-control"
+                required
+              />
+              <label class="form-label" for="form6Example5"
+                >Achievements (Comma seperated)</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <textarea
+                class="form-control"
+                id="form6Example7"
+                name="about"
+                rows="4"
+                required
+              ></textarea>
+              <label class="form-label" for="form6Example7"
+                >About yourself</label
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Update
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelector("#form6Example1").value = user.name;
+      document.querySelector("#form6Example2").value = user.githubProfile;
+      document.querySelector("#form6Example3").value = user.skills;
+      document.querySelector("#form6Example4").value = user.projects;
+      document.querySelector("#form6Example5").value = user.achievements;
+      document.querySelector("#form6Example6").value = user.qualification;
+      document.querySelector("#form6Example7").value = user.about;
+      document.querySelector("#form6Example8").value = user.status;
+
+      const formElement = document.getElementById("editForm");
+      console.log(formElement);
+
+      formElement.addEventListener("submit", async (event) => {
+        event.preventDefault(); // stops the form submission from the browser
+        const formData = new FormData(formElement); // converts the data inside the form to a JavaScript FormData Object.
+        const data = Object.fromEntries(formData.entries());
+        // Add user's userId and email to the above data object
+        data.userId = user.userId;
+        data.email = user.email;
+        console.log(JSON.stringify(data));
+        // Send the request to the backend with the data
+        const response = await fetch("http://localhost:3000/edit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const responseData = await response.json();
+        console.log(responseData);
+        localStorage.setItem("user", JSON.stringify(responseData));
+
+        if (localStorage.getItem("user")) {
+          window.location.href = "index.html";
+        }
+      });
+    </script>
+  </body>
+</html>
