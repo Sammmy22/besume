@@ -4,6 +4,8 @@ Besume - "Build a resume"
 
 It is a website for building resume that looks great and does not require much effort to build.
 
+[Sample Resume created from this repo](Besume.pdf)
+
 ## Run Locally
 
 Clone the project
@@ -55,5 +57,3 @@ Create a database named `userdb` and create a table inside it named `usertable`
 **Client:** HTML, Bootstrap
 
 **Server:** Node, Express, MySQL
-
-[Sample Resume created from this repo](Besume.pdf)
