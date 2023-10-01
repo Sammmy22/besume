@@ -25,9 +25,9 @@ Install dependencies
   npm install
 ```
 
-Create a `.env` file in the backend directory
+Create a `.env` file in the backend directory and add the following variables to it with the values you want to use
 
-```bash
+```
   DB_HOST=
   DB_USER=
   DB_PASSWORD=
@@ -44,7 +44,7 @@ Start the server
 
 # The Database
 
-create a database named `userdb` and create a table named `usertable`
+Create a database named `userdb` and create a table inside it named `usertable`
 
 ## Table schema
 
@@ -56,4 +56,4 @@ create a database named `userdb` and create a table named `usertable`
 
 **Server:** Node, Express, MySQL
 
-[Sample Resume created from this website](Besume.pdf)
+[Sample Resume created from this repo](Besume.pdf)
