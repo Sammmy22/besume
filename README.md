@@ -25,6 +25,17 @@ Install dependencies
   npm install
 ```
 
+Create a `.env` file in the backend directory
+
+```bash
+  DB_HOST=
+  DB_USER=
+  DB_PASSWORD=
+  DB_DATABASE=
+  DB_PORT=
+  PORT=
+```
+
 Start the server
 
 ```bash
